@@ -19,7 +19,6 @@
   }
 
   .neon-glow {
-    /* UPDATED: Further reduced the glow and opacity for a much softer effect */
     box-shadow: 0 0 8px rgba(34, 211, 238, 0.3);
   }
 
@@ -40,7 +39,6 @@
     @apply h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transition-all duration-500;
   }
 
-  /* Enhanced button styles */
   .btn-primary {
     @apply px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-medium transition-all duration-200 hover:from-cyan-500 hover:to-blue-600 transform hover:scale-105 shadow-lg hover:shadow-xl;
   }
@@ -49,7 +47,6 @@
     @apply px-4 py-2 bg-white/10 text-white rounded-lg font-medium transition-all duration-200 hover:bg-white/20 border border-white/20 hover:border-cyan-400/50;
   }
 
-  /* Card animations */
   .card-enter {
     animation: slideInUp 0.5s ease-out;
   }
@@ -74,7 +71,6 @@
     display: none;
   }
 
-  /* Custom gradients */
   .gradient-text {
     @apply bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent;
   }
@@ -91,7 +87,7 @@
   }
 }
 
-/* Custom animations */
+/* ===== ANIMATIONS ===== */
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
@@ -133,48 +129,51 @@
   animation: fadeIn 0.5s ease-out;
 }
 
-/* Smooth scrolling */
+/* ===== GLOBAL STYLES ===== */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: rgba(34, 211, 238, 0.5);
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(34, 211, 238, 0.7);
 }
 
-/* Enhanced focus styles */
 *:focus {
   outline: 2px solid rgba(34, 211, 238, 0.5);
   outline-offset: 2px;
 }
 
-/* Loading animation */
 @keyframes shimmer {
-  0% {
-    background-position: -200px 0;
-  }
-  100% {
-    background-position: calc(200px + 100%) 0;
-  }
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
 }
-
 .shimmer {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.1) 75%);
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 75%);
   background-size: 200px 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* ===== TEXT SIZE ===== */
+body *:not(.clock-wrapper):not(.clock-wrapper *) {
+  font-size: 1.125rem !important; /* +12.5 % */
+}
+.clock-wrapper {
+  font-size: 1.25rem !important;  /* clock slightly larger */
+}
+
+/* ===== REMOVE HOVER BLUR ON GLASS-CARD ===== */
+.glass-card:hover {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }

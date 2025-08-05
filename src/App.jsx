@@ -27,7 +27,7 @@ function App() {
     },
     {
       name: "ZR Mission",
-      startDate: "2025-08-05T00:00:00",
+      startDate: "2025-11-01T00:00:00",
       endDate: "2026-11-01T00:00:00",
       icon: "zap",
       color: "cyan"
@@ -108,7 +108,7 @@ function App() {
                 </svg>
                 Daily Routine
               </h3>
-              <div className="h-96 overflow-y-auto scrollbar-hide pr-2">
+              <div className="h-[29rem] overflow-y-auto scrollbar-hide pr-2">
                 <DailyRoutine />
               </div>
             </div>
