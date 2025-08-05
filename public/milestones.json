@@ -1,0 +1,42 @@
+{
+  "milestones": [
+    {
+      "id": "small-milestone",
+      "name": "Small Milestone",
+      "description": "August 2025 Learning Goals",
+      "startDate": "2025-08-05T00:00:00",
+      "endDate": "2025-08-20T23:59:59",
+      "icon": "clock",
+      "color": "cyan",
+      "category": "Learning",
+      "priority": "high"
+    },
+    {
+      "id": "z-mission",
+      "name": "Z Mission",
+      "description": "Full Stack Web Development Completion",
+      "startDate": "2025-08-05T00:00:00",
+      "endDate": "2025-10-31T23:59:59",
+      "icon": "target",
+      "color": "cyan",
+      "category": "Career",
+      "priority": "critical"
+    },
+    {
+      "id": "zr-mission",
+      "name": "ZR Mission",
+      "description": "Life-changing milestone preparation",
+      "startDate": "2025-08-05T00:00:00",
+      "endDate": "2026-11-01T00:00:00",
+      "icon": "zap",
+      "color": "cyan",
+      "category": "Personal",
+      "priority": "critical"
+    }
+  ],
+  "settings": {
+    "updateInterval": 60000,
+    "showExpiredMilestones": true,
+    "timeFormat": "detailed"
+  }
+}

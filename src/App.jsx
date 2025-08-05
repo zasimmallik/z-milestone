@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Clock from './components/Clock';
 import Calendar from './components/Calendar';
-import ZMission from './components/Z-MISSION';
-import ZRMission from './components/ZR-MISSION';
+import DynamicMilestone from './components/DynamicMilestone';
 import AllZMissionAndMilestone from './components/All Z-MISSION-And-Milestone';
 import FitnessProgress from './components/Fitness-Progress';
 import DailyRoutine from './components/DAILY-ROUTINE';
@@ -10,6 +9,31 @@ import DailyRoutine from './components/DAILY-ROUTINE';
 function App() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedMonth, setSelectedMonth] = useState(new Date());
+
+  // Sample milestone data - you can move this to a JSON file later
+  const milestones = [
+    {
+      name: "Small Milestone",
+      startDate: "2025-08-05T00:00:00",
+      endDate: "2025-08-20T23:59:59", // End of August 20th
+      icon: "clock",
+      color: "cyan"
+    },
+    {
+      name: "Z Mission",
+      startDate: "2025-08-05T00:00:00",
+      endDate: "2025-10-31T23:59:59", // End of October 31st
+      icon: "target",
+      color: "cyan"
+    },
+    {
+      name: "ZR Mission",
+      startDate: "2025-08-05T00:00:00",
+      endDate: "2026-11-01T00:00:00", // November 1st, 2026
+      icon: "zap",
+      color: "cyan"
+    }
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -31,8 +55,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-
-
       {/* Main Content */}
       <main className="w-full px-4 py-8">
         {/* Clock Section */}
@@ -90,112 +112,24 @@ function App() {
                 </svg>
                 Daily Routine
               </h3>
-              <div className="h-96 overflow-y-auto scrollbar-hide pr-2">
+              <div className="h-97 overflow-y-auto scrollbar-hide pr-2">
                 <DailyRoutine />
               </div>
             </div>
           </div>
 
-          {/* Right Column - Sidebar Components */}
+          {/* Right Column - Dynamic Milestone Components */}
           <div className="lg:col-span-1 space-y-6">
-            {/* Small Milestone */}
-            <div className="glass-card p-6">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-4 flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Small Milestone
-              </h3>
-              <div className="space-y-4">
-                <div className="bg-white/5 rounded-lg p-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-gray-300 text-sm">Weeks</span>
-                    <span className="text-lg font-bold text-white"></span>
-                  </div>
-                  <div className="text-xs text-gray-400">3 days 8 hours</div>
-                </div>
-                <div className="bg-white/5 rounded-lg p-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-gray-300 text-sm">Days</span>
-                    <span className="text-lg font-bold text-white"></span>
-                  </div>
-                  <div className="text-xs text-gray-400">8 hours remaining</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Z Mission */}
-            <div className="glass-card p-6">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-4 flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Z Mission
-              </h3>
-              <div className="space-y-4">
-                <div className="bg-white/5 rounded-lg p-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-gray-300 text-sm">Months</span>
-                    <span className="text-lg font-bold text-white">2</span>
-                  </div>
-                  <div className="text-xs text-gray-400">27 days 8 hours</div>
-                </div>
-                <div className="bg-white/5 rounded-lg p-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-gray-300 text-sm">Weeks</span>
-                    <span className="text-lg font-bold text-white">12</span>
-                  </div>
-                  <div className="text-xs text-gray-400">4 days 8 hours</div>
-                </div>
-                <div className="bg-white/5 rounded-lg p-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-gray-300 text-sm">Days</span>
-                    <span className="text-lg font-bold text-white">88</span>
-                  </div>
-                  <div className="text-xs text-gray-400">8 hours remaining</div>
-                </div>
-              </div>
-            </div>
-
-            {/* ZR Mission */}
-            <div className="glass-card p-6">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-4 flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                ZR Mission
-              </h3>
-              <div className="space-y-4">
-                <div className="bg-white/5 rounded-lg p-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-gray-300 text-sm">Years</span>
-                    <span className="text-lg font-bold text-white">0</span>
-                  </div>
-                  <div className="text-xs text-gray-400">11 months 26 days 8 hours</div>
-                </div>
-                <div className="bg-white/5 rounded-lg p-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-gray-300 text-sm">Months</span>
-                    <span className="text-lg font-bold text-white">11</span>
-                  </div>
-                  <div className="text-xs text-gray-400">27 days 8 hours</div>
-                </div>
-                <div className="bg-white/5 rounded-lg p-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-gray-300 text-sm">Weeks</span>
-                    <span className="text-lg font-bold text-white">51</span>
-                  </div>
-                  <div className="text-xs text-gray-400">5 days 8 hours</div>
-                </div>
-                <div className="bg-white/5 rounded-lg p-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-gray-300 text-sm">Days</span>
-                    <span className="text-lg font-bold text-white">362</span>
-                  </div>
-                  <div className="text-xs text-gray-400">8 hours remaining</div>
-                </div>
-              </div>
-            </div>
+            {milestones.map((milestone, index) => (
+              <DynamicMilestone
+                key={`${milestone.name}-${index}`}
+                title={milestone.name}
+                startDate={milestone.startDate}
+                endDate={milestone.endDate}
+                icon={milestone.icon}
+                color={milestone.color}
+              />
+            ))}
           </div>
         </div>
 
