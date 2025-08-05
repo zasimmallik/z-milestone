@@ -1,0 +1,25 @@
+{
+    "title": "Mini Milestones — August 2025",
+    "period": "August 5th – August 20th, 2025",
+    "milestones": [
+      {
+        "id": 8,
+        "dateRange": "August 5 – August 9, 2025",
+        "title": "React Router And State Management",
+        "description": "Complete learning and implementation of React Router and State Management."
+      },
+      {
+        "id": 9,
+        "dateRange": "August 10 – August 15, 2025",
+        "title": "React Authentication",
+        "description": "Implement authentication features in React including login, registration, and protected routes."
+      },
+      {
+        "id": 10,
+        "dateRange": "August 16 – August 20, 2025",
+        "title": "Backend And Database Integration",
+        "description": "Integrate a backend server and connect it with a database to enable full-stack functionality."
+      }
+    ]
+  }
+  

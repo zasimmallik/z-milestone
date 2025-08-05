@@ -1,0 +1,50 @@
+{
+    "title": "DAILY ROUTINE",
+    "updated": "InshaAllah, Regular & Friday Routine",
+    "routines": [
+      {
+        "day": "Regular Day",
+        "schedule": [
+          { "time": "4:45 am – 5:30 am", "activity": "Fajr prayer & Exercise Cardio" },
+          { "time": "5:30 am – 6:15 am", "activity": "Reading the Quran" },
+          { "time": "6:15 am – 9:15 am", "activity": "Coding" },
+          { "time": "9:15 am – 9:45 am", "activity": "Eating" },
+          { "time": "9:45 am – 12:15 pm", "activity": "Coding" },
+          { "time": "12:15 pm – 1:00 pm", "activity": "Exercise" },
+          { "time": "1:00 pm – 2:00 pm", "activity": "Shower, Dhuhr Prayer, Eating" },
+          { "time": "2:00 pm – 2:30 pm", "activity": "Rest" },
+          { "time": "2:30 pm – 3:45 pm", "activity": "Audiobook / Movies" },
+          { "time": "3:45 pm – 4:30 pm", "activity": "English" },
+          { "time": "4:30 pm", "activity": "Asr prayer" },
+          { "time": "5:00 pm – 6:30 pm", "activity": "Coding" },
+          { "time": "6:30 pm", "activity": "Maghrib prayer" },
+          { "time": "7:00 pm – 8:30 pm", "activity": "Coding" },
+          { "time": "8:30 pm", "activity": "Isha prayer" },
+          { "time": "9:00 pm – 9:45 pm", "activity": "Preparation for sleep, eating" },
+          { "time": "9:45 pm – 4:45 am", "activity": "Sleep" }
+        ]
+      },
+      {
+        "day": "Friday",
+        "schedule": [
+          { "time": "4:45 am – 5:30 am", "activity": "Fajr prayer & Exercise Cardio" },
+          { "time": "5:30 am – 6:30 am", "activity": "Reading the Quran" },
+          { "time": "6:30 am – 9:30 am", "activity": "Coding" },
+          { "time": "9:30 am – 10:00 am", "activity": "Eating" },
+          { "time": "10:00 am – 12:00 pm", "activity": "Coding" },
+          { "time": "12:00 pm – 2:00 pm", "activity": "Washing clothes, Shower, Dhuhr Prayer, Eating" },
+          { "time": "2:00 pm – 2:30 pm", "activity": "Rest" },
+          { "time": "2:30 pm – 3:30 pm", "activity": "English" },
+          { "time": "3:30 pm – 4:30 pm", "activity": "Coding" },
+          { "time": "4:30 pm – 5:00 pm", "activity": "Asr prayer" },
+          { "time": "5:00 pm – 6:30 pm", "activity": "Coding" },
+          { "time": "6:30 pm – 7:00 pm", "activity": "Maghrib prayer" },
+          { "time": "7:00 pm – 8:30 pm", "activity": "Coding / outing with friends" },
+          { "time": "8:30 pm – 9:00 pm", "activity": "Return home" },
+          { "time": "9:00 pm – 9:45 pm", "activity": "Preparation for sleep, eating" },
+          { "time": "9:45 pm – 4:45 am", "activity": "Sleep" }
+        ]
+      }
+    ]
+  }
+  

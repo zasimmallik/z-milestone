@@ -1,0 +1,81 @@
+{
+    "title": "Fitness Progress",
+    "targetDate": "July 1, 2026",
+    "metrics": [
+      {
+        "id": 1,
+        "label": "Age",
+        "current": 21,
+        "target": 23,
+        "unit": "years"
+      },
+      {
+        "id": 2,
+        "label": "Height",
+        "current": 170.18,
+        "target": 170.18,
+        "unit": "cm"
+      },
+      {
+        "id": 3,
+        "label": "Weight",
+        "current": "61kg",
+        "target": "70–75kg"
+      },
+      {
+        "id": 4,
+        "label": "Neck",
+        "current": "14\"",
+        "target": "15–15.5\""
+      },
+      {
+        "id": 5,
+        "label": "Chest",
+        "current": "36\"",
+        "target": "39–40\""
+      },
+      {
+        "id": 6,
+        "label": "Biceps",
+        "current": "11.5\"",
+        "target": "13.5–14.5\""
+      },
+      {
+        "id": 7,
+        "label": "Forearm",
+        "current": "10\"",
+        "target": "11–11.5\""
+      },
+      {
+        "id": 8,
+        "label": "Waist",
+        "current": "33\"",
+        "target": "31.5–32\""
+      },
+      {
+        "id": 9,
+        "label": "Thighs",
+        "current": "21\"",
+        "target": "22.5–23.5\""
+      },
+      {
+        "id": 10,
+        "label": "Calves",
+        "current": "14\"",
+        "target": "14.5–15.5\""
+      },
+      {
+        "id": 11,
+        "label": "Body Fat",
+        "current": "18.7%",
+        "target": "13–14%"
+      },
+      {
+        "id": 12,
+        "label": "BMI",
+        "current": 21.4,
+        "target": "24.2–24.9"
+      }
+    ]
+  }
+  
