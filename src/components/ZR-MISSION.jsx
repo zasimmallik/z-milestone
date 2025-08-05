@@ -43,22 +43,19 @@ const ZRMission = () => {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'planned':
-        return 'text-blue-400';
-      case 'in-progress':
-        return 'text-yellow-400';
-      case 'completed':
-        return 'text-green-400';
-      default:
-        return 'text-gray-400';
+      case 'planned': return 'text-blue-400';
+      case 'in-progress': return 'text-yellow-400';
+      case 'completed': return 'text-green-400';
+      default: return 'text-gray-400';
     }
   };
 
   return (
     <div className="glass-card p-6">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-cyan-400">{missionData.title}</h3>
-        <span className={`text-sm font-medium ${getStatusColor(missionData.status)}`}>
+        {/* UPDATED: Increased font sizes */}
+        <h3 className="text-xl font-semibold text-cyan-400">{missionData.title}</h3>
+        <span className={`text-base font-medium ${getStatusColor(missionData.status)}`}>
           {missionData.status}
         </span>
       </div>
@@ -66,17 +63,20 @@ const ZRMission = () => {
       <div className="space-y-4">
         <div className="p-4 bg-white/5 rounded-lg border border-cyan-500/20">
           <div className="flex items-start justify-between mb-2">
-            <h4 className="font-semibold text-white">{missionData.title}</h4>
-            <span className="text-sm text-cyan-400 font-medium">
+            {/* UPDATED: Increased font sizes */}
+            <h4 className="text-lg font-semibold text-white">{missionData.title}</h4>
+            <span className="text-base text-cyan-400 font-medium">
               {formatDate(missionData.date)}
             </span>
           </div>
-          <p className="text-sm text-gray-300 leading-relaxed mb-3">
+          {/* UPDATED: Increased font sizes */}
+          <p className="text-base text-gray-300 leading-relaxed mb-3">
             {missionData.description}
           </p>
           <div className="flex items-center space-x-2">
-            <span className="text-xs text-gray-400">Category:</span>
-            <span className="text-xs text-cyan-400 font-medium">{missionData.category}</span>
+            {/* UPDATED: Increased font sizes */}
+            <span className="text-sm text-gray-400">Category:</span>
+            <span className="text-sm text-cyan-400 font-medium">{missionData.category}</span>
           </div>
         </div>
       </div>
@@ -84,4 +84,4 @@ const ZRMission = () => {
   );
 };
 
-export default ZRMission; 
+export default ZRMission;

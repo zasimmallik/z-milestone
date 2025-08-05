@@ -18,7 +18,6 @@ const AllZMissionAndMilestone = () => {
   }, []);
 
   if (!missionData) {
-    // Skeleton loader with updated colors
     return (
       <div className="bg-[#2a2141] rounded-xl border border-purple-500/30 p-6">
         <div className="animate-pulse">
@@ -57,18 +56,18 @@ const AllZMissionAndMilestone = () => {
   };
 
   return (
-    // UPDATED: New background color applied here
     <div className="bg-[#2a2141] rounded-xl border border-purple-500/30 p-6">
       <div className="text-center mb-10">
-        {/* UPDATED: Increased text sizes */}
+        {/* REVERTED: Large header size */}
         <h3 className="text-3xl font-bold text-cyan-400 mb-2">{missionData.title}</h3>
-        <p className="text-base text-gray-300">{missionData.subtitle}</p>
+        {/* UPDATED: Increased smaller text */}
+        <p className="text-lg text-gray-300">{missionData.subtitle}</p>
       </div>
       
       <div className="space-y-10">
         {missionData.missions.map((mission) => (
           <div key={mission.id}>
-            {/* UPDATED: Increased text sizes */}
+            {/* REVERTED: Large header size */}
             <h4 className="text-2xl font-semibold text-white border-b border-cyan-500/30 pb-2 mb-6">
               {mission.title}
             </h4>
@@ -77,9 +76,9 @@ const AllZMissionAndMilestone = () => {
               {mission.milestones.map((milestone) => (
                 <div key={milestone.id} className="p-4 bg-black/20 rounded-lg">
                   <div className="flex items-start justify-between mb-2">
-                    {/* UPDATED: Increased text sizes */}
-                    <h5 className="text-lg font-semibold text-white">{`🌟 Milestone ${milestone.id}: ${milestone.title}`}</h5>
-                    <div className="flex items-center space-x-2 text-sm font-medium flex-shrink-0 ml-4">
+                    {/* UPDATED: Increased smaller text */}
+                    <h5 className="text-xl font-semibold text-white">{`🌟 Milestone ${milestone.id}: ${milestone.title}`}</h5>
+                    <div className="flex items-center space-x-2 text-base font-medium flex-shrink-0 ml-4">
                       {getStatusIcon(milestone.status)}
                       <span className={getStatusColor(milestone.status)}>
                         {milestone.status}
@@ -88,21 +87,19 @@ const AllZMissionAndMilestone = () => {
                   </div>
                   
                   <div>
-                    {/* UPDATED: Increased text sizes */}
-                    <p className="text-base text-cyan-400 font-medium">{milestone.deadline}</p>
+                    {/* UPDATED: Increased smaller text */}
+                    <p className="text-lg text-cyan-400 font-medium">{milestone.deadline}</p>
                     <div className="mt-3">
                       {milestone.points ? (
                         <div className="space-y-2">
                           {milestone.points.map((point, index) => (
-                            // UPDATED: Increased text sizes
-                            <div key={index} className="p-3 bg-black/20 rounded-lg text-base text-gray-300">
+                            <div key={index} className="p-3 bg-black/20 rounded-lg text-lg text-gray-300">
                               {point}
                             </div>
                           ))}
                         </div>
                       ) : (
-                        // UPDATED: Increased text sizes
-                        <p className="text-base text-gray-300 mt-2">{milestone.details}</p>
+                        <p className="text-lg text-gray-300 mt-2">{milestone.details}</p>
                       )}
                     </div>
                   </div>

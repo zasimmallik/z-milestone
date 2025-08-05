@@ -19,7 +19,8 @@
   }
 
   .neon-glow {
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+    /* UPDATED: Further reduced the glow and opacity for a much softer effect */
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.3);
   }
 
   .neon-border {

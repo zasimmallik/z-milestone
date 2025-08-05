@@ -35,21 +35,24 @@ const SmallMilestone = () => {
   return (
     <div className="glass-card p-6">
       <div className="text-center mb-6">
-        <h3 className="text-lg font-semibold text-cyan-400 mb-2">{milestoneData.title}</h3>
-        <p className="text-sm text-gray-300">{milestoneData.period}</p>
+        {/* UPDATED: Increased font sizes */}
+        <h3 className="text-xl font-semibold text-cyan-400 mb-2">{milestoneData.title}</h3>
+        <p className="text-base text-gray-300">{milestoneData.period}</p>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {milestoneData.milestones.map((milestone) => (
           <div key={milestone.id} className="p-4 bg-white/5 rounded-lg border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs text-cyan-400 font-medium">{milestone.dateRange}</span>
+              {/* UPDATED: Increased font sizes */}
+              <span className="text-sm text-cyan-400 font-medium">{milestone.dateRange}</span>
               <div className="w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center">
-                <span className="text-xs text-cyan-400 font-bold">{milestone.id}</span>
+                <span className="text-sm text-cyan-400 font-bold">{milestone.id}</span>
               </div>
             </div>
-            <h4 className="font-semibold text-white mb-2">{milestone.title}</h4>
-            <p className="text-sm text-gray-300 leading-relaxed">
+            {/* UPDATED: Increased font sizes */}
+            <h4 className="text-lg font-semibold text-white mb-2">{milestone.title}</h4>
+            <p className="text-base text-gray-300 leading-relaxed">
               {milestone.description}
             </p>
           </div>
@@ -59,4 +62,4 @@ const SmallMilestone = () => {
   );
 };
 
-export default SmallMilestone; 
+export default SmallMilestone;

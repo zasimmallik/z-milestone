@@ -21,6 +21,7 @@ const Clock = ({ currentDate }) => {
 
   return (
     <div className="glass-card p-8 text-center neon-glow">
+      {/* REVERTED: Font sizes returned to original */}
       <div className="text-6xl md:text-8xl font-bold text-cyan-400 text-glow mb-4">
         {formatTime(currentDate)}
       </div>
@@ -31,4 +32,4 @@ const Clock = ({ currentDate }) => {
   );
 };
 
-export default Clock; 
+export default Clock;

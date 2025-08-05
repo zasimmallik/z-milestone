@@ -39,13 +39,15 @@ const DailyRoutine = () => {
 
   return (
     <div className="glass-card p-6">
-      <h3 className="text-lg font-semibold text-cyan-400 mb-4">{routineData.title}</h3>
-      <p className="text-sm text-gray-300 mb-6">{routineData.updated}</p>
+      {/* UPDATED: Increased font sizes */}
+      <h3 className="text-xl font-semibold text-cyan-400 mb-4">{routineData.title}</h3>
+      <p className="text-base text-gray-300 mb-6">{routineData.updated}</p>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {routineData.routines.map((routine) => (
           <div key={routine.day} className="space-y-3">
-            <h4 className="text-md font-semibold text-white border-b border-cyan-500/30 pb-2">
+            {/* UPDATED: Increased font sizes */}
+            <h4 className="text-lg font-semibold text-white border-b border-cyan-500/30 pb-2">
               {routine.day}
             </h4>
             <div className="space-y-2 max-h-96 overflow-y-auto scrollbar-hide">
@@ -55,10 +57,12 @@ const DailyRoutine = () => {
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="text-sm font-medium text-cyan-400">
+                    {/* UPDATED: Increased font sizes */}
+                    <div className="text-base font-medium text-cyan-400">
                       {activity.time}
                     </div>
-                    <div className="text-xs text-gray-300 mt-1">
+                    {/* UPDATED: Increased font sizes */}
+                    <div className="text-sm text-gray-300 mt-1">
                       {activity.activity}
                     </div>
                   </div>
@@ -72,4 +76,4 @@ const DailyRoutine = () => {
   );
 };
 
-export default DailyRoutine; 
+export default DailyRoutine;

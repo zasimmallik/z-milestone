@@ -36,21 +36,22 @@ const FitnessProgress = () => {
     if (typeof current === 'number' && typeof target === 'number') {
       return Math.min((current / target) * 100, 100);
     }
-    // For string values like "61kg" vs "70–75kg", return a default progress
-    return 60; // Default progress for non-numeric values
+    return 60;
   };
 
   return (
     <div className="glass-card p-6">
-      <h3 className="text-lg font-semibold text-cyan-400 mb-2">{fitnessData.title}</h3>
-      <p className="text-sm text-gray-300 mb-6">Target: {fitnessData.targetDate}</p>
+      {/* UPDATED: Increased font sizes */}
+      <h3 className="text-xl font-semibold text-cyan-400 mb-2">{fitnessData.title}</h3>
+      <p className="text-base text-gray-300 mb-6">Target: {fitnessData.targetDate}</p>
       
       <div className="space-y-4">
         {fitnessData.metrics.map((metric) => (
           <div key={metric.id} className="space-y-2">
             <div className="flex justify-between items-center">
-              <span className="text-gray-300 text-sm">{metric.label}</span>
-              <div className="text-right">
+              {/* UPDATED: Increased font sizes */}
+              <span className="text-base text-gray-300">{metric.label}</span>
+              <div className="text-right text-base"> {/* UPDATED: Increased font size */}
                 <span className="text-white font-medium">{metric.current}</span>
                 <span className="text-gray-400 mx-2">→</span>
                 <span className="text-cyan-400 font-medium">{metric.target}</span>
@@ -69,4 +70,4 @@ const FitnessProgress = () => {
   );
 };
 
-export default FitnessProgress; 
+export default FitnessProgress;
