@@ -112,7 +112,7 @@ function App() {
                 </svg>
                 Daily Routine
               </h3>
-              <div className="h-97 overflow-y-auto scrollbar-hide pr-2">
+              <div className="h-96 overflow-y-auto scrollbar-hide pr-2">
                 <DailyRoutine />
               </div>
             </div>

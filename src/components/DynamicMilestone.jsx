@@ -89,33 +89,13 @@ const DynamicMilestone = ({
       <div className="space-y-4">
         {timeUnits.map((unit) => (
           <div key={unit.label} className="bg-white/5 rounded-lg p-3">
-            <div className="flex justify-between items-center mb-1">
+            <div className="flex justify-between items-center">
               <span className="text-gray-300 text-sm">{unit.label}</span>
               <span className={`text-lg font-bold text-white ${timeRemaining.isExpired ? 'text-red-400' : ''}`}>
                 {timeRemaining.isExpired ? '0' : unit.value}
               </span>
             </div>
-            {/* Additional detail for the last non-zero unit */}
-            {unit.label === 'Days' && (
-              <div className="text-xs text-gray-400">
-                {timeRemaining.isExpired ? 'Expired' : `${timeRemaining.hours} hours remaining`}
-              </div>
-            )}
-            {unit.label === 'Weeks' && timeRemaining.years === 0 && timeRemaining.months === 0 && (
-              <div className="text-xs text-gray-400">
-                {timeRemaining.isExpired ? 'Expired' : `${timeRemaining.days} days ${timeRemaining.hours} hours`}
-              </div>
-            )}
-            {unit.label === 'Months' && timeRemaining.years === 0 && (
-              <div className="text-xs text-gray-400">
-                {timeRemaining.isExpired ? 'Expired' : `${Math.floor(timeRemaining.totalDays % 30)} days ${timeRemaining.hours} hours`}
-              </div>
-            )}
-            {unit.label === 'Years' && (
-              <div className="text-xs text-gray-400">
-                {timeRemaining.isExpired ? 'Expired' : `${timeRemaining.months} months ${Math.floor(timeRemaining.totalDays % 30)} days ${timeRemaining.hours} hours`}
-              </div>
-            )}
+            {/* The confusing and incorrect detail text has been removed to provide a clean, non-overlapping display. */}
           </div>
         ))}
       </div>

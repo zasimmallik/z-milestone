@@ -1,7 +1,8 @@
 // src/utils/timeUtils.js
 
 /**
- * Calculate the remaining time between current date and end date
+ * Calculate the remaining time between current date and end date in a non-overlapping way.
+ * This function accurately handles different month lengths and leap years.
  * @param {string|Date} endDate - The target end date
  * @returns {Object} Object containing years, months, weeks, days, hours, and total milliseconds
  */
@@ -19,27 +20,47 @@ export const calculateTimeRemaining = (endDate) => {
       days: 0,
       hours: 0,
       totalMs: 0,
-      isExpired: true
+      isExpired: true,
     };
   }
 
-  // Calculate time units
-  const totalHours = Math.floor(totalMs / (1000 * 60 * 60));
+  // Use a temporary date to perform calculations without modifying 'now'
+  let tempNow = new Date(now);
+
+  // Calculate full years remaining
+  let years = target.getFullYear() - tempNow.getFullYear();
+  tempNow.setFullYear(tempNow.getFullYear() + years);
+  if (tempNow > target) {
+    years--;
+    tempNow.setFullYear(tempNow.getFullYear() - 1);
+  }
+
+  // Calculate full months remaining after accounting for years
+  let months = target.getMonth() - tempNow.getMonth();
+  if (months < 0) {
+    months += 12; // Adjust for year wrap-around
+  }
+  tempNow.setMonth(tempNow.getMonth() + months);
+  if (tempNow > target) {
+    months--;
+    tempNow.setMonth(tempNow.getMonth() - 1);
+  }
+
+  // The remaining difference will be used for days and smaller units
+  const remainingMs = target.getTime() - tempNow.getTime();
+
+  // Calculate days, weeks, and hours from the remaining milliseconds
+  const remainingDays = Math.floor(remainingMs / (1000 * 60 * 60 * 24));
+  
+  const weeks = Math.floor(remainingDays / 7);
+  const days = remainingDays % 7;
+  
+  const hours = Math.floor((remainingMs / (1000 * 60 * 60)) % 24);
+
+  // For compatibility with other parts of your app, we can still calculate total values
   const totalDays = Math.floor(totalMs / (1000 * 60 * 60 * 24));
   const totalWeeks = Math.floor(totalDays / 7);
-  
-  // Calculate years and months more accurately
-  const years = Math.floor(totalDays / 365);
-  const remainingDaysAfterYears = totalDays - (years * 365);
-  const months = Math.floor(remainingDaysAfterYears / 30);
-  const remainingDaysAfterMonths = remainingDaysAfterYears - (months * 30);
-  
-  // Calculate weeks and days from remaining days
-  const weeks = Math.floor(remainingDaysAfterMonths / 7);
-  const days = remainingDaysAfterMonths % 7;
-  
-  // Calculate remaining hours in the current day
-  const hours = totalHours % 24;
+  const totalHours = Math.floor(totalMs / (1000 * 60 * 60));
 
   return {
     years,
@@ -49,10 +70,10 @@ export const calculateTimeRemaining = (endDate) => {
     hours,
     totalMs,
     isExpired: false,
-    // Additional useful values
+    // Keep these additional values in case they are used elsewhere
     totalDays,
     totalWeeks,
-    totalHours
+    totalHours,
   };
 };
 
