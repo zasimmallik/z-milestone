@@ -13,20 +13,20 @@ function App() {
   const milestones = [
     {
       name: "Small Milestone",
-      startDate: "2025-08-05T00:00:00",
-      endDate: "2025-08-20T23:59:59",
+      startDate: "2025-08-10T00:00:00",
+      endDate: "2025-08-23T23:59:59",
       icon: "clock",
       color: "cyan"
     },
     {
-      name: "Z Mission",
-      startDate: "2025-08-05T00:00:00",
+      name: "Z-MISSION 1",
+      startDate: "",
       endDate: "2025-10-31T23:59:59",
       icon: "target",
       color: "cyan"
     },
     {
-      name: "ZR Mission",
+      name: "✦ ZR Mission ✦",
       startDate: "2025-11-01T00:00:00",
       endDate: "2026-11-01T00:00:00",
       icon: "zap",

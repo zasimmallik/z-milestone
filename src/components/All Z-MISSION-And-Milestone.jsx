@@ -77,7 +77,7 @@ const AllZMissionAndMilestone = () => {
                 <div key={milestone.id} className="p-4 bg-black/20 rounded-lg">
                   <div className="flex items-start justify-between mb-2">
                     {/* UPDATED: Increased smaller text */}
-                    <h5 className="text-xl font-semibold text-white">{`🌟 Milestone ${milestone.id}: ${milestone.title}`}</h5>
+                    <h5 className="text-xl font-semibold text-white">{`✦ Milestone  ${milestone.id}: ${milestone.title}`}</h5>
                     <div className="flex items-center space-x-2 text-base font-medium flex-shrink-0 ml-4">
                       {getStatusIcon(milestone.status)}
                       <span className={getStatusColor(milestone.status)}>

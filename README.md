@@ -38,6 +38,10 @@ It provides a comprehensive overview of your **missions, milestones, daily routi
 
 ---
 
+👤 Author
+Zasim Mallik
+GitHub: @zasimmallik
+
 ## 🎯 Project Structure
 
 ```bash
@@ -92,7 +96,3 @@ z-milestone/
 ├── postcss.config.js
 ├── README.md
 └── tailwind.config.js
-
-👤 Author
-Zasim Mallik
-GitHub: @zasimmallik
