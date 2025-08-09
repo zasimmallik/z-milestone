@@ -14,7 +14,7 @@ function App() {
     {
       name: "Small Milestone",
       startDate: "2025-08-10T00:00:00",
-      endDate: "2025-08-23T23:59:59",
+      endDate: "2025-08-25T23:59:59",
       icon: "clock",
       color: "cyan"
     },
